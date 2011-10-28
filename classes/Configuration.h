@@ -1,0 +1,164 @@
+ //
+ //  Configuration.h
+ //  Gardening
+ //
+ //  Created by maesinfo on 11-8-2.
+ //  Copyright 2011 MaesInfo Corporation. All rights reserved.
+ //
+ //
+
+
+#ifndef _CONFIGURATION_H
+#define _CONFIGURATION_H
+
+
+#define SAFE_RELEASE(p)  if(p)[p release];p=nil
+
+#define CURRENT_VERSION @"1.0.0.2"
+#define LOADING_IMAGE_FILE @"loading.png"
+
+#define MAIN_VIEW_HEIGHT [[UIScreen mainScreen] applicationFrame].size.height
+#define SCREEN_HEIGHT (MAIN_VIEW_HEIGHT + STATUS_BAR_HEIGHT)
+#define SCREEN_WIDTH [[UIScreen mainScreen] applicationFrame].size.width
+#define MAINSEG_MARGIN 4
+#define MAINSEG_HEIGHT 40
+#define HORIZ_SWIPE_DRAG_MIN 12
+#define VERT_SWIPE_DRAG_MIN 12
+#define HORIZ_SWIPE_DRAG_MAX 10
+#define VERT_SWIPE_DRAG_MAX 10 
+#define STATUS_BAR_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height
+
+
+
+// Toolbar
+#define TOOLBAR_HEIGHT 45
+#define TOOLBAR_IMAGE_WIDTH  30
+#define TOOLBAR_IMAGE_HEIGHT 30
+#define TOOLBAR_TITLE_HEIGHT 15
+#define TOOLBAR_COLOR_NORMAL   1.0f
+#define TOOLBAR_COLOR_SELECTED 0.6f
+
+//Dash Board
+#define HEADER_LOGO_X 10
+#define HEADER_LOGO_Y 10
+#define HEADER_LOGO_WIDTH  SCREEN_WIDTH*0.68
+#define HEADER_LOGO_HEIGHT HEADER_LOGO_WIDTH*0.18
+#define HEADER_LOGO2_HEIGHT HEADER_LOGO_HEIGHT*0.8
+
+#define UNIT_START_X 30
+#define UNIT_START_Y 75
+#define UNIT_WIDTH  90
+#define UNIT_HEIGHT 100
+#define UNIT_OFFSET_X 40
+#define UNIT_OFFSET_Y 16
+
+
+
+// Browse cell
+#define BROWSE_CELL_HEIGHT          86.0f
+#define BROWSE_CELL_IMAGE_MARGIN    5
+#define BROWSE_CELL_IMAGE_WIDTH    (BROWSE_CELL_HEIGHT-BROWSE_CELL_IMAGE_MARGIN*2)
+#define BROWSE_CELL_ICONAREA_WIDTH  20
+#define BROWSE_CELL_ICONAREA_MARGIN 4
+#define BROWSE_CELL_TITLE_WIDTH  (SCREEN_WIDTH - BROWSE_CELL_IMAGE_WIDTH - BROWSE_CELL_IMAGE_MARGIN*2 - BROWSE_CELL_ICONAREA_WIDTH-BROWSE_CELL_ICONAREA_MARGIN*2)
+#define BROWSE_CELL_TITLE_X     ( BROWSE_CELL_HEIGHT + BROWSE_CELL_IMAGE_MARGIN)
+#define BROWSE_CELL_TITLE_Y         5
+#define BROWSE_CELL_TITLE_FONTSIZE  18.0f
+#define BROWSE_CELL_TITLE2_FONTSIZE  14.0f
+#define BROWSE_CELL_TITLE_HEIGHT    (BROWSE_CELL_TITLE_FONTSIZE*1.2)
+#define BROWSE_CELL_TITLE2_HEIGHT   (BROWSE_CELL_TITLE2_FONTSIZE*1.2)
+#define BROWSE_CELL_FAVORITE_HEIGHT 25
+#define BROWSE_CELL_FAVORITE_Y      (BROWSE_CELL_HEIGHT-BROWSE_CELL_FAVORITE_HEIGHT-8)
+
+#define CELL_SECOND_LEVEL_HEIGHT 60
+
+
+// Plant
+#define PLANT_DONE_HEIGHT      48
+#define PLANT_DONE_MARGIN      6
+#define PLANT_DONE_X           SCREEN_WIDTH*0.2
+#define PLANT_DONE_WIDTH       (SCREEN_WIDTH - PLANT_DONE_X*2)
+
+
+//Detail view
+#define DETAIL_IMAGE_MAX_LENGTH   (SCREEN_WIDTH*0.7)
+#define DETAIL_SEGCTRL_X  SCREEN_WIDTH*0.5
+#define DETAIL_SEGCTRL_Y  MAINSEG_MARGIN
+#define DETAIL_SEGCTRL_WIDTH  (SCREEN_WIDTH-DETAIL_SEGCTRL_X-MAINSEG_MARGIN*2)
+#define DETAIL_SEGCTRL_HEIGHT MAINSEG_HEIGHT
+#define DETAIL_CONTENT_X      10
+#define DETAIL_CONTENT_Y      10
+#define DETAIL_EMBEDED_WIDTH   (SCREEN_WIDTH/2-DETAIL_CONTENT_X)
+#define DETAIL_EMBEDED_HEIGHT  DETAIL_EMBEDED_WIDTH
+#define DETAIL_ICONBUTTON_WIDTH   16
+#define DETAIL_ICONBUTTON_HEIGHT  16
+#define DETAIL_CELL_COUNT         3
+#define DETAIL_CELLHEADER_HEIGHT DETAIL_EMBEDED_HEIGHT/5
+#define DETAIL_CELL_WIDTH   DETAIL_EMBEDED_WIDTH
+#define DETAIL_CELL_HEIGHT (DETAIL_EMBEDED_HEIGHT - DETAIL_CELLHEADER_HEIGHT)/DETAIL_CELL_COUNT
+
+
+
+typedef enum _TransitionDirection
+{
+	TRANSITIONNONE =0,
+	TRANSITIONLEFT,
+	TRANSITIONRIGHT,
+	TRANSITIONUP,
+	TRANSITIONBOTTOM,
+	TRANSITIONNUM
+} TransitionDirection;
+
+/*ViewControllerBase*/
+#define	ANIMIID_FOR_VIEW_TRANFORM @"animiViewTranform"
+
+/*CDFoodViewController*/
+#define TOOLBAR_BUTTON_COUNT 4
+#define TOOLBAR_BUTTON_OFFSET 0
+
+/*FoodInfoShowView*/
+#define EXTENSIONVIEWHEIGHT 30
+#define	PRICEVIEWWIDTH 100
+#define LABELWHEIGHT 20
+#define	TASTEVIEWWIDTH 100
+#define DISTANCE_BETWEEN_LABEL 20
+
+/*RecommendationFoodShowView*/
+#define DISTANCE_BETWEEN_PICTURE_TEXT 4
+#define DISTANCE_BETWEEN_VIEW 15
+#define POSITION_Y (POSITION_TEXT_Y +30)
+#define POSITION_TEXT_Y 5
+#define	SCALE_VIEW 1.0f
+#define SHOW_IMAGE_COUNT 3
+#define IMAGE_VIEW_BECOME_BIG_AMIMATIOM_ID @"becomeBig"
+#define SIZE_BECOME_BIG 8
+#define TITLE @"food recommend"
+
+/*MainMenuView*/
+#define MAIN_VIEW_POINT_X 0
+#define MAIN_VIEW_POINT_Y 0
+#define RECOMMENDATIONFOODSHOWVIEWHEIGHT 200
+#define MAIN_MENU_BUTTON_WIDTH 32
+#define MAIN_MENU_BUTTON_HEIGHT 32
+#define BUTTON_SIZE_BECOME_BIG 10
+#define ANIMIID_FOR_SNAKE_BUTTON @"animiSnakeButton"
+#define ANIMIID_FOR_DINNER_BUTTON @"animiDinnerButton"
+#define ANIMIID_FOR_HOTPOT_BUTTON @"animiHotpotButton"
+#define ANIMIID_FOR_OTHER_BUTTON @"animiOtherButton"
+
+
+/* file name */
+#define DASHBOARD_DEFAULT   @"dashboard_default.png"
+#define DASHBOARD_SELECTED  @"dashboard_selected.png"
+#define BROWSE_DEFAULT      @"browse_default.png"
+#define BROWSE_SELECTED     @"browse_selected.png"
+#define SEARCH_DEFAULT      @"search_default.png"
+#define SEARCH_SELECTED     @"search_selected.png"
+#define FAVORITE_DEFAULT    @"favorite_default.png"
+#define FAVORITE_SELECTED   @"favorite_selected.png"
+#define FAVORITE_BUTTON     @"favorite_button.png"
+#define MORE_DEFAULT        @"feedback_default.png"
+#define MORE_SELECTED       @"feedback_selected.png"
+
+
+#endif
