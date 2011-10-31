@@ -39,7 +39,16 @@
 	[self.view addSubview:buttonFeedback];
 	[buttonFeedback release];
 	
+	
 	UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 210, 120, 40)];
+	[btn setTitle:@"Help" forState:UIControlStateNormal];
+	btn.backgroundColor = [UIColor grayColor];
+	btn.titleLabel.textColor = [UIColor blackColor];
+	[btn addTarget:self action:@selector(goHelp:) forControlEvents:UIControlEventTouchUpInside];
+	[self.view addSubview:btn];
+	[btn release];
+	
+	btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 290, 120, 40)];
 	[btn setTitle:@"Donate" forState:UIControlStateNormal];
 	btn.backgroundColor = [UIColor grayColor];
 	btn.titleLabel.textColor = [UIColor blackColor];
@@ -47,15 +56,6 @@
 	[self.view addSubview:btn];
 	[btn release];
 	
-
-	btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 290, 120, 40)];
-	[btn setTitle:@"Help" forState:UIControlStateNormal];
-	btn.backgroundColor = [UIColor grayColor];
-	btn.titleLabel.textColor = [UIColor blackColor];
-	[btn addTarget:self action:@selector(goHelp:) forControlEvents:UIControlEventTouchUpInside];
-	[self.view addSubview:btn];
-	[btn release];
-
 
 	self.view.backgroundColor = colorBackground;
 }
@@ -87,7 +87,6 @@
 {
 	if(nil == aboutController)
 	{
-		//	[listView setMode:indexPath.row-3];
 		aboutController = [[aboutViewController alloc]init];
 	}
 	
@@ -102,7 +101,6 @@
 {
 	if(nil == helpController)
 	{
-		//	[listView setMode:indexPath.row-3];
 		helpController = [[helpViewController alloc]init];
 	}
 	
@@ -114,16 +112,17 @@
 
 - (IBAction)goDonate:(id)sender
 {
-	if(nil == donateController)
-	{
-		//	[listView setMode:indexPath.row-3];
-		donateController = [[DonateViewController alloc]init];
-	}
-	
-	if(self.navigationController.topViewController == self)
-	    [self.navigationController pushViewController :donateController animated:YES];
-	[self.navController setNavigationBarHidden:NO animated:NO];
-	
+//	if(nil == donateController)
+//	{
+//		donateController = [[DonateViewController alloc]init];
+//	}
+//	
+//	if(self.navigationController.topViewController == self)
+//	    [self.navigationController pushViewController :donateController animated:YES];
+//	[self.navController setNavigationBarHidden:NO animated:NO];
+
+	NSString* launchUrl = @"http://pollinator.org/beesmartapp_donate.htm";
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString: launchUrl]];
 }
 
 

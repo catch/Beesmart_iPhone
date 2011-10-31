@@ -124,7 +124,6 @@
 		BEBE77A914443B250036C9ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBE77A814443B250036C9ED /* CoreLocation.framework */; };
 		BEC67E3413F4DC5C00B8CB7E /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC67E3313F4DC5C00B8CB7E /* SearchViewController.m */; };
 		BEC9CF93144BF1590089F5DA /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC9CF92144BF1590089F5DA /* StartViewController.m */; };
-		BEC9CFC8144BFC7B0089F5DA /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC9CFC7144BFC7B0089F5DA /* DonateViewController.m */; };
 		BECD33991421974F00722F67 /* pollinator_0.png in Resources */ = {isa = PBXBuildFile; fileRef = BECD33941421974F00722F67 /* pollinator_0.png */; };
 		BECD339A1421974F00722F67 /* pollinator_1.png in Resources */ = {isa = PBXBuildFile; fileRef = BECD33951421974F00722F67 /* pollinator_1.png */; };
 		BECD339B1421974F00722F67 /* pollinator_2.png in Resources */ = {isa = PBXBuildFile; fileRef = BECD33961421974F00722F67 /* pollinator_2.png */; };
@@ -327,8 +326,6 @@
 		BEC67E3313F4DC5C00B8CB7E /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		BEC9CF91144BF1590089F5DA /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		BEC9CF92144BF1590089F5DA /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
-		BEC9CFC6144BFC7B0089F5DA /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
-		BEC9CFC7144BFC7B0089F5DA /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
 		BECD33941421974F00722F67 /* pollinator_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pollinator_0.png; path = res/pollinator_0.png; sourceTree = "<group>"; };
 		BECD33951421974F00722F67 /* pollinator_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pollinator_1.png; path = res/pollinator_1.png; sourceTree = "<group>"; };
 		BECD33961421974F00722F67 /* pollinator_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pollinator_2.png; path = res/pollinator_2.png; sourceTree = "<group>"; };
@@ -556,8 +553,6 @@
 				BE57BEB91418BC7800085ED1 /* ZipViewController.m */,
 				BEF26E7D1446E0DD00D2D403 /* aboutViewController.h */,
 				BEF26E7E1446E0DD00D2D403 /* aboutViewController.m */,
-				BEC9CFC7144BFC7B0089F5DA /* DonateViewController.m */,
-				BEC9CFC6144BFC7B0089F5DA /* DonateViewController.h */,
 				BEF26E801446E0FE00D2D403 /* helpViewController.h */,
 				BEF26E811446E0FE00D2D403 /* helpViewController.m */,
 				BEC9CF91144BF1590089F5DA /* StartViewController.h */,
@@ -887,7 +882,6 @@
 				BEF26E7F1446E0DD00D2D403 /* aboutViewController.m in Sources */,
 				BEF26E821446E0FE00D2D403 /* helpViewController.m in Sources */,
 				BEC9CF93144BF1590089F5DA /* StartViewController.m in Sources */,
-				BEC9CFC8144BFC7B0089F5DA /* DonateViewController.m in Sources */,
 				BEF89FE6144D82A6009F269B /* CatchNotesLauncher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
