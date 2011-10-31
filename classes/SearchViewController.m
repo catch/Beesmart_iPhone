@@ -25,9 +25,10 @@
 
 }
 
--(IBAction) hideKeyboard:(id)sender
+-(IBAction) hidekKeyboard:(id)sender
 {
 	[inputSearch resignFirstResponder];
+	[self becomeFirstResponder];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -74,7 +75,7 @@
 
 	if([inputSearch.text length] > 0 )
 	{
-		[self hideKeyboard:self];
+		[self hidekKeyboard:self];
 	}
 	else {
 		[inputSearch becomeFirstResponder];
@@ -136,32 +137,28 @@
 
 
 
-- (IBAction) doSearch:(id)sender
-{
-}
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//	[inputSearch resignFirstResponder];
+//}
+//
+//- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//	[inputSearch resignFirstResponder];
+//	
+//}
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	[inputSearch resignFirstResponder];
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	[inputSearch resignFirstResponder];
-	
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	[inputSearch resignFirstResponder];
-	
-}
+//- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//	[inputSearch resignFirstResponder];
+//	
+//}
 
 #pragma mark 
 #pragma mark UITextFieldDelegate
 
 - (BOOL) textFieldShouldReturn:(id)textField{
-    [textField  resignFirstResponder];
+    [self hidekKeyboard:nil];
 	return YES;
 }
 

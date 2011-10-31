@@ -39,10 +39,8 @@
 
 
 
--(IBAction) hideKeyboard:(id)sender;
+-(IBAction) hidekKeyboard:(id)sender;
 
-
--(IBAction)doSearch:(id)sender;
 -(IBAction) onSearchValueChanged:(id)sender;
 
 @end

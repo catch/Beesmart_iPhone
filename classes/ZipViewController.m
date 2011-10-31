@@ -38,15 +38,16 @@
 {
 	[super loadView];
 
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"start_bg" ofType:@"png"];
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"start_bg.png" ofType:nil];
 	UIImageView *tmpView = [[[UIImageView alloc]initWithFrame:self.view.frame]autorelease];// CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>)
 	tmpView.image = [UIImage imageWithContentsOfFile:path];//imageNamed:LOADING_IMAGE_FILE]];
 
 	bgView = [[UIControl alloc]initWithFrame:self.view.frame];
 	[bgView addTarget:self action:@selector(hideKeyboard:) forControlEvents:UIControlEventTouchUpInside];
-	[bgView addSubview:tmpView];
 	[self.view addSubview:bgView];
-//	[tmpView release];
+	[bgView addSubview:tmpView];
+	//[tmpView release];
+	[bgView release];
 
 	float x_margin = 60;
 	UITextField   *tempInput = [[UITextField alloc]initWithFrame:CGRectMake(x_margin*screen_rate, MAIN_VIEW_HEIGHT*0.43,SCREEN_WIDTH - x_margin*2*screen_rate, 32*screen_rate)];
@@ -76,6 +77,7 @@
 	[returnButton addTarget:self action:@selector(showDashboard:) forControlEvents:UIControlEventTouchUpInside];
 	returnButton.hidden = YES;
 	[self.view addSubview:returnButton];
+	
 
 }
 
@@ -83,18 +85,19 @@
 {
 	[super viewWillAppear:animated];
 	GardeningAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-	[delegate unarchive:ARCHIVE_ZIPCODE];
-	if(nil == delegate.zipCode)
-	{
-		returnButton.hidden = YES;
-		currentMode = ZIPCODE_INIT;
-		zipInput.placeholder = @"";
-	}
-	else {
-		returnButton.hidden = NO;
-		currentMode = ZIPCODE_EDIT;
-		zipInput.placeholder = delegate.zipCode;
-	}
+//	[delegate unarchive:ARCHIVE_ZIPCODE];
+//	if(nil == delegate.zipCode)
+//	{
+//		returnButton.hidden = YES;
+//		currentMode = ZIPCODE_INIT;
+//		zipInput.placeholder = @"";
+//	}
+//	else 
+//	{
+
+	returnButton.hidden = NO;
+	currentMode = ZIPCODE_EDIT;
+	zipInput.placeholder = delegate.zipCode;
 	bCorrectZip = FALSE;
 
 
@@ -114,6 +117,10 @@
 
 - (IBAction)keyboardDidHide:(NSNotification *)note
 {
+	GardeningAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+	if(delegate.currentController != self)
+		return;
+	
 	if(bCorrectZip)
 	{
 //		if(ZIPCODE_INIT == currentMode)

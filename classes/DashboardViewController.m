@@ -51,6 +51,7 @@
 	[searchBtn setImage:[UIImage imageNamed:@"search_dashboard.png"] forState: UIControlStateNormal];
 	[searchBtn addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:searchBtn];
+	[searchBtn release];
 
 
 	// Plants
