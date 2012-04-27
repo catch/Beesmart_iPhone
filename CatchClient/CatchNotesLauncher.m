@@ -261,7 +261,7 @@ NSString *aboutHTML = @"<html>"
 "			<div>Notes, images, ideas, to-dos, numbers, names, links, locations, recipes, articles - in one place.</div>"
 "			"
 "			<div class=\"label\">With you wherever you go</div>"
-"			<div>Free syncing with Android, iPhone, and iPad, lets you keep your important notes by your side.</div>"
+"			<div>Free syncing with iPhone, and iPad, and other devices, lets you keep your important notes by your side.</div>"
 "		</div>"
 "		<br />"
 "		<center><button class=\"appStore\" onclick=\"window.location='itms-apps://itunes.apple.com/us/app/3banana-notes/id355424047?mt=8'\">Get Catch Notes - It's Free!</button><br />"
@@ -358,7 +358,7 @@ NSString *aboutHTML = @"<html>"
 {
 	NSURL *url = [request URL];
 	if ([[url absoluteString] isEqualToString:@"cocoa://cancel/"]) {
-		[self.parentViewController dismissModalViewControllerAnimated:YES];
+		[self dismissModalViewControllerAnimated:YES];
 		return NO;
 	} else if ([[url scheme] isEqualToString:@"itms-apps"]) {
 		[[UIApplication sharedApplication] openURL:url];

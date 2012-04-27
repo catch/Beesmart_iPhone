@@ -22,9 +22,7 @@ limitations under the License.*/
 
 
 @interface CatchNotesLauncher : UIViewController <UIWebViewDelegate>
-{
-	NSError *error;
-}
+
 + (void)createNewNoteWithText:(NSString*)text 
 	fromViewController:(UIViewController*)viewController;
 
