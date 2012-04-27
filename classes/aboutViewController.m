@@ -29,8 +29,6 @@
 	NSURL *url = [NSURL fileURLWithPath:path];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	[web loadRequest:request];
-	
-	SAFE_RELEASE(memPool);
 }
 
 -(void) viewWillAppear:(BOOL)animated

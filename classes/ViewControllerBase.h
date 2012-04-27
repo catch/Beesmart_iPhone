@@ -21,8 +21,6 @@
 	UIColor  *colorBackground;
 	NSUInteger  screen_rate;
 
-	//memory control
-	NSAutoreleasePool *memPool;
 	// UIView controls
 	NSMutableArray  *uiArray;
 }

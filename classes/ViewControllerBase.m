@@ -32,7 +32,6 @@
 	}
 	[super viewWillAppear:animated];
 	
-	SAFE_RELEASE(memPool);
 }
 
 
@@ -128,7 +127,6 @@
 
 - (void) loadView
 {
-	memPool = [[NSAutoreleasePool alloc] init];
 	screen_rate = SCREEN_WIDTH/320.0f +0.01;
 
 	[self willLoadView];

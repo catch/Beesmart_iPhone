@@ -43,8 +43,6 @@
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	[web loadRequest:request];
 	
-
-	SAFE_RELEASE(memPool);
 }
 
 - (void) dealloc

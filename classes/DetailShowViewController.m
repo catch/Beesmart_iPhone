@@ -175,8 +175,6 @@
 
 	self.title = @"Detail";
 	[self updateView];
-	
-	SAFE_RELEASE(memPool);
 }
 
 - (void) initLineInfos
